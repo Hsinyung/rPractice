@@ -3,9 +3,19 @@ title: "2018-09-19"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+```{r}
+a<-5
+5->b
+```
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+```{r}
+b<-"你好"
+```
+
+```{r}
+bVector<-c("你好","How are you?")
+
+```
 
 ```{r}
 plot(cars)
