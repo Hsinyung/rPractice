@@ -1,21 +1,9 @@
 ---
-title: "2018-09-19"
+title: "2018-09-26"
 output: html_notebook
 ---
 
-```{r}
-a<-5
-5->b
-```
-
-```{r}
-b<-"你好"
-```
-
-```{r}
-bVector<-c("你好","How are you?")
-
-```
+ 
 
 ```{r}
 plot(cars)
