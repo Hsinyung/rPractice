@@ -1,0 +1,14 @@
+"0","num1<-1.568"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","num2<-2.121"
+"0","round(num1,digits = 2)#小數點後第二位"
+"1","[1]"
+"1"," 1.57"
+"1","
+"
