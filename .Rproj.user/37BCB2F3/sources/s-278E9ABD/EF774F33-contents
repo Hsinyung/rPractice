@@ -1,0 +1,73 @@
+---
+title: "2018-10-03 practice"
+output: html_notebook
+---
+
+
+```{r}
+plot(cars)
+bVector<-c("你好","How are you?")
+class(bVector)
+```
+
+```{r}
+library(lubridate)
+library(stringr)
+
+chineseyear<-c("099/01","099/02","099/03")
+chineseyear<-ymd("099/01","099/02","099/03")
+class(chineseyear)
+```
+```{r}
+duration(day = -1)
+duration(second = 90)
+duration(minute = 1.5)
+duration(mins = 1.5)
+duration(second = 3, minute = 1.5, hour = 2, day = 6, week = 1)
+duration(hour = 1, minute = -60)
+```
+
+```{r}
+
+```
+
+```{r}
+library(lubridate)
+a <- ymd("2017-01-31") 
+b <- ymd_hms("2017-01-31 20:11:59")
+class(a)
+class(b)
+
+```
+
+```{r}
+a <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="month")
+b <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="quarter")
+c <- seq(ymd("2001-01-01"),ymd("2018-09-01"),by="year")
+```
+
+```{r}
+library(stringr)
+str_c(letters, " is for", "...")
+
+```
+
+```{r}
+str_c(letters[-26], " comes before ", letters[-1])
+```
+
+```{r}
+str_c(letters, collapse = "")
+```
+
+```{r}
+str_c(letters, collapse = ", ")
+```
+````
+```{r}
+
+
+```
+
+
+
