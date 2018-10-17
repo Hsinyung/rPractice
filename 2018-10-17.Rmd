@@ -19,10 +19,9 @@ table(arrayResult)
 
 ```{r}
 library(googlesheets)
-``
 ```
 
 ```{r}
-gs_auth(new_user = TRUE)
+gs_auth (new_user = TRUE)
 ```
 
