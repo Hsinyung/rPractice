@@ -1,0 +1,19 @@
+---
+title: "2018-10-17"
+output: html_notebook
+---
+
+
+```{r}
+library(stringr)
+str_split_fixed(filmVotingData $請選擇你最喜歡的影片二部,", ",n=3)->splitResult
+```
+
+```{r}
+str_c(splitResult) -> arrayResult
+head (arrayResult)
+```
+```{r}
+table(arrayResult)
+```
+
