@@ -31,7 +31,7 @@ student %<>% mutate(
 ```{r}
 as.numeric(student$身高)
 x <-levels(student$身高 <= 170)
-names(x)<-c("小個子")
+names(x)<-c("小個子") #錯了!!!!
 ```
 
 ```{r}
