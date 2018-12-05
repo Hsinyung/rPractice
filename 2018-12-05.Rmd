@@ -36,7 +36,15 @@ minMaxFun <- function(x){
 max(x) -> max
 min(x) -> min
 paste("最大值:" ,max , "最小值" , min) ->result
-return(result)
+}
+```
+
+```{r}
+minMaxFun3 <- function(x){
+max(x) -> max
+min(x) -> min
+paste("最大值:" ,max , "最小值" , min) %>%
+  print()
 }
 ```
 
@@ -72,6 +80,76 @@ paste0("最大值： ",maxNumber, " 最小值： ",minNumber)
 max(libraryData$書籍上架年月)-> maxNumber
 min(libraryData$書籍上架年月)-> minNumber
 paste0("最大值： ",maxNumber, " 最小值： ",minNumber)
+```
+
+```{r}
+not_numeric<-function(x){
+  !is.numeric(x) ->result
+  return(result)
+}
+not_numeric(libraryData$書籍館藏地)
+not_numeric(libraryData$讀者年級)
+```
+
+```{r}
+library(dplyr)
+#(libraryData$學院 == "人文學院") ->sub
+#libraryData[sub,] ->sub
+#(libraryData$學院 == "社會科學院") ->sub2
+#libraryData[sub2,] ->sub2
+
+college <-function(x){
+  (libraryData$學院 == x) ->sub
+  libraryData[sub , ]
+}
+college("社會科學院") ->sample1
+college("人文學院") ->sample2
+nrow(sample1)
+nrow(sample2)
+```
+
+```{r}
+library(dplyr)
+libraryData %>%
+  select(讀者借閱冊數,書籍出版日期) %>%
+  summarise(
+    讀者平均借閱冊數=mean(讀者借閱冊數),
+    最小書籍出版日期=min(書籍出版日期 ,na.rm = T),
+    最大書籍出版日期=max(書籍出版日期 , na.rm = T)
+  )
+```
+
+```{r}
+library(dplyr)
+libraryData %>%
+  group_by(學院) %>%
+  summarise(
+    學院借閱冊數 = length(學號)
+  )
+```
+
+```{r}
+library(summarytools)
+library(summarytools)
+libraryData %>%
+  select_if(
+    is.numeric
+  ) %>% dfSummary() %>% 
+view(.)
+```
+
+```{r}
+(libraryData$書籍出版日期 == 1199) %>%
+  which(.) %>%
+  libraryData[. ,]
+```
+
+```{r}
+library(summarytools)
+libraryData %>%
+  select_if(
+   not_numeric
+  ) %>% summarytools::dfSummary() %>% summarytools::view(.)
 ```
 
 
