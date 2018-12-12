@@ -1,0 +1,103 @@
+---
+title: "2018-12-12"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+library(dplyr)
+library(stringr)
+```
+
+
+```{r}
+library(readr)
+libraryData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/library100_102.csv")
+```
+
+```{r}
+libraryData$書籍館藏地 <- as.factor(libraryData$書籍館藏地)
+levels(libraryData$書籍館藏地)->storageLocations
+#libraryData$書籍館藏地 %>% as.factor %>% levels -> storageLocations
+#storageLocations
+```
+
+```{r}
+i<- 1
+# 1
+storageLocation_i <- storageLocations[i] 
+# 2
+numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+subsample_i <- libraryData[numericalIndexForSubsample,]
+# 3
+borrowCount_i <- nrow(subsample_i)
+```
+
+```{r}
+# 0
+allBorrowCount <- vector("numeric",18)
+i<- 2
+  # 1
+  storageLocation_i <- storageLocations[i] 
+  # 2
+  numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+  subsample_i <- libraryData[numericalIndexForSubsample,]
+  # 3
+  borrowCount_i <- nrow(subsample_i)
+  # 4
+  allBorrowCount[[i]]<-borrowCount_i #[]一次可選很多位子 [[]]一次只能選一個位置
+```
+
+```{r}
+allBorrowCount <- vector("numeric",18)
+for (i in c (1:18)){
+  i<- 2
+  # 1
+  storageLocation_i <- storageLocations[i] 
+  # 2
+  numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+  subsample_i <- libraryData[numericalIndexForSubsample,]
+  # 3
+  borrowCount_i <- nrow(subsample_i)
+  # 4
+  allBorrowCount[[i]]<-borrowCount_i
+}
+```
+
+```{r}
+# 0
+allBorrowCount <- vector("numeric",18)
+for(i in c(1:18)){
+  # 1
+  storageLocation_i <- storageLocations[i] 
+  # 2
+  numericalIndexForSubsample<-which(libraryData$書籍館藏地==storageLocation_i)
+  subsample_i <- libraryData[numericalIndexForSubsample,]
+  # 3
+  borrowCount_i <- nrow(subsample_i)
+  # 4
+  allBorrowCount[[i]]<-borrowCount_i  
+}
+```
+
+```{r}
+as.factor(libraryData$學院) ->libraryData$學院
+levels(libraryData$學院) ->college
+```
+
+```{r}
+# 0
+collegeBorrowCount_i <- vector("numeric",5)
+for(i in c(1:5)){
+  # 1
+  college_i <- college[i] 
+  # 2
+  numericalIndexForSubsample<-which(libraryData$學院 == college_i)
+  collegesubsample_i <- libraryData[numericalIndexForSubsample,]
+  # 3
+  collegeborrowCount_i <- nrow(collegesubsample_i)
+  # 4
+  collegeBorrowCount[[i]]<-collegeborrowCount_i  
+}
+```
+

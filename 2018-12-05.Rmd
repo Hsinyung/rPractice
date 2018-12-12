@@ -152,4 +152,9 @@ libraryData %>%
   ) %>% summarytools::dfSummary() %>% summarytools::view(.)
 ```
 
+```{r}
+library(readr)
+transcriptData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcript100_102.csv")
+```
+
 
