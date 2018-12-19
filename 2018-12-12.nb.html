@@ -187,9 +187,16 @@ library(stringr)</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmxpYnJhcnlEYXRhIDwtIHJlYWRfY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9tYXN0ZXIvbGlicmFyeTEwMF8xMDIuY3N2XCIpXG5gYGAifQ== -->
-<pre class="r"><code>library(readr)
-libraryData &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/library100_102.csv&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmBgYCJ9 -->
+<pre class="r"><code>library(readr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc2NhbihmaWxlID0gZmlsZSwgd2hhdCA9IHdoYXQsIHNlcCA9IHNlcCwgcXVvdGUgPSBxdW90ZSwgZGVjID0gZGVjLCAgOlxuICBFT0Ygd2l0aGluIHF1b3RlZCBzdHJpbmdcbiJ9 -->
+<pre><code>Warning message:
+In scan(file = file, what = what, sep = sep, quote = quote, dec = dec,  :
+  EOF within quoted string</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeURhdGEgPC0gcmVhZF9jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2dpdGh1Yi1kYXRhL21hc3Rlci9saWJyYXJ5MTAwXzEwMi5jc3ZcIilcbmBgYCJ9 -->
+<pre class="r"><code>libraryData &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/library100_102.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICC+x7i5ID0gY29sX2NoYXJhY3RlcigpLFxuICCu0cR5w/6nTyA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgrtHEeaZXutkgPSBjb2xfY2hhcmFjdGVyKCksXG4gIMWqqsytyb5cXKVVvMYgPSBjb2xfaW50ZWdlcigpLFxuICCu0cR5pViqqaTptMEgPSBjb2xfaW50ZWdlcigpLFxuICCu0cR5wF3Cw6ZhID0gY29sX2NoYXJhY3RlcigpLFxuICCu0cR5pFesW6Z+pOsgPSBjb2xfZGF0ZShmb3JtYXQgPSBcIlwiKSxcbiAgpEq+x6Z+ID0gY29sX2ludGVnZXIoKSxcbiAgxaqqzKZ+r8UgPSBjb2xfaW50ZWdlcigpLFxuICC+x7B8ID0gY29sX2NoYXJhY3RlcigpLFxuICCtyb5cXK7JtqEgPSBjb2xfY2hhcmFjdGVyKClcbilcbiJ9 -->
 <pre><code>Parsed with column specification:
@@ -219,15 +226,17 @@ cols(
 In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
   input string 1 is invalid in this locale</code></pre>
 <!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKGxpYnJhcnlEYXRhJOabuOexjemkqOiXj+WcsCktPnN0b3JhZ2VMb2NhdGlvbnNcbmBgYCJ9 -->
-<pre class="r"><code>levels(libraryData$書籍館藏地)-&gt;storageLocations</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGV2ZWxzKGxpYnJhcnlEYXRhJOabuOexjemkqOiXj+WcsCktPnN0b3JhZ2VMb2NhdGlvbnNcbiNsaWJyYXJ5RGF0YSTmm7jnsY3ppKjol4/lnLAgJT4lIGFzLmZhY3RvciAlPiUgbGV2ZWxzIC0+IHN0b3JhZ2VMb2NhdGlvbnNcbiNzdG9yYWdlTG9jYXRpb25zXG5gYGAifQ== -->
+<pre class="r"><code>levels(libraryData$書籍館藏地)-&gt;storageLocations
+#libraryData$書籍館藏地 %&gt;% as.factor %&gt;% levels -&gt; storageLocations
+#storageLocations</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaTwtMVxuYGBgIn0= -->
-<pre class="r"><code>i&lt;-1</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaTwtIDFcbmBgYCJ9 -->
+<pre class="r"><code>i&lt;- 1</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
 <pre><code>Warning message:
@@ -333,10 +342,17 @@ levels(libraryData$學院) -&gt;college</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAwXG5jb2xsZWdlQm9ycm93Q291bnRfaSA8LSB2ZWN0b3IoXCJudW1lcmljXCIsNSlcbmZvcihpIGluIGMoMTo1KSl7XG4gICMgMVxuICBjb2xsZWdlX2kgPC0gY29sbGVnZVtpXSBcbiAgIyAyXG4gIG51bWVyaWNhbEluZGV4Rm9yU3Vic2FtcGxlPC13aGljaChsaWJyYXJ5RGF0YSTlrbjpmaIgPT0gY29sbGVnZV9pKVxuICBjb2xsZWdlc3Vic2FtcGxlX2kgPC0gbGlicmFyeURhdGFbbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGUsXVxuICAjIDNcbiAgY29sbGVnZWJvcnJvd0NvdW50X2kgPC0gbnJvdyhjb2xsZWdlc3Vic2FtcGxlX2kpXG4gICMgNFxuICBjb2xsZWdlQm9ycm93Q291bnRbW2ldXTwtY29sbGVnZWJvcnJvd0NvdW50X2kgIFxufVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAwXG5jb2xsZWdlQm9ycm93Q291bnQgPC0gdmVjdG9yKFwibnVtZXJpY1wiLGxlbmd0aChjb2xsZWdlKSkgI+iuiuaVuOS4jemcgOimgV9pXG5gYGAifQ== -->
 <pre class="r"><code># 0
-collegeBorrowCount_i &lt;- vector(&quot;numeric&quot;,5)
-for(i in c(1:5)){
+collegeBorrowCount &lt;- vector(&quot;numeric&quot;,length(college)) #變數不需要_i</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGkgaW4gYygxOmxlbmd0aChjb2xsZWdlKSkpe1xuICAjIDFcbiAgY29sbGVnZV9pIDwtIGNvbGxlZ2VbaV0gXG4gICMgMlxuICBudW1lcmljYWxJbmRleEZvclN1YnNhbXBsZTwtd2hpY2gobGlicmFyeURhdGEk5a246ZmiID09IGNvbGxlZ2VfaSlcbiAgY29sbGVnZXN1YnNhbXBsZV9pIDwtIGxpYnJhcnlEYXRhW251bWVyaWNhbEluZGV4Rm9yU3Vic2FtcGxlLF1cbiAgIyAzXG4gIGNvbGxlZ2Vib3Jyb3dDb3VudF9pIDwtIG5yb3coY29sbGVnZXN1YnNhbXBsZV9pKVxuICAjIDRcbiAgY29sbGVnZUJvcnJvd0NvdW50W1tpXV08LWNvbGxlZ2Vib3Jyb3dDb3VudF9pICBcbn1cbm5hbWVzKGNvbGxlZ2VCb3Jyb3dDb3VudCkgPC0gY29sbGVnZVxuYGBgIn0= -->
+<pre class="r"><code>for(i in c(1:length(college))){
   # 1
   college_i &lt;- college[i] 
   # 2
@@ -346,13 +362,202 @@ for(i in c(1:5)){
   collegeborrowCount_i &lt;- nrow(collegesubsample_i)
   # 4
   collegeBorrowCount[[i]]&lt;-collegeborrowCount_i  
+}
+names(collegeBorrowCount) &lt;- college</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZmFjdG9yKGxpYnJhcnlEYXRhJOWtuOiZnykgLT5zdHVTdWJzYW1wbGVcbmBgYCJ9 -->
+<pre class="r"><code>as.factor(libraryData$學號) -&gt;stuSubsample</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1Qm9ycm93IDwtIHZlY3RvcihcIm51bWVyaWNcIiAsIGxlbmd0aChzdHUpKVxuZm9yIChpIGluIGMoMTpsZW5ndGgoc3R1KSkpe1xuICBzdHVfaSA8LSBzdHVbaV1cbiAgXG4gIHN0dVN1YnNhbXBsZSA8LXdoaWNoKGxpYnJhcnlEYXRhJOWtuOiZnyA9PSBzdHVfaSlcbiAgXG4gIHN0dVN1Yl9pIDwtbGlicmFyeURhdGFbc3R1U3Vic2FtcGxlLF1cbiAgXG4gIHN0dUJvcnJvd19pIDwtbnJvdyhzdHVTdWJfaSlcbiAgXG4gIHN0dUJvcnJvd1tbaV1dIDwtc3R1Qm9ycm93X2lcbn1cbnN0dUJvcnJvd1xuYGBgIn0= -->
+<pre class="r"><code>stuBorrow &lt;- vector(&quot;numeric&quot; , length(stu))
+for (i in c(1:length(stu))){
+  stu_i &lt;- stu[i]
+  
+  stuSubsample &lt;-which(libraryData$學號 == stu_i)
+  
+  stuSub_i &lt;-libraryData[stuSubsample,]
+  
+  stuBorrow_i &lt;-nrow(stuSub_i)
+  
+  stuBorrow[[i]] &lt;-stuBorrow_i
+}
+stuBorrow</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgWzFdIDEwNyAgMjMgIDU2ICA2MiAgMjIgICA5ICA5OSAgMTEgIDIyIDE0OSAgMjIgMTQ5IDExNyAgMTIgIDMzICAzMyAxMDEgIDY1ICAyMiAgMjZcbiAgWzIxXSAgMjYgIDgwIDIwMSAgMjggIDYyICA2MiAxNjQgIDQxICAgOCAxMDIgICA1ICAzMyAgMTEgIDk3ICA3MCAyODUgMTY5ICAgNyAgODQgIDY1XG4gIFs0MV0gIDIyICA0NiAxNDggMTQ4ICAgMiAgNzUgMzIxICAyMiAgNTYgIDE0IDIwNiAgNDQgIDU5ICA2NyAgNTMgIDI2IDI3MyAgNDcgIDExICA1MVxuICBbNjFdICA0NCAgMjcgIDI1ICA4MCAxNDggIDI3ICAzOSAgMTIgMzIxICAyMiAgNjcgIDUxICAyMCAzMjEgIDQwIDE2OSAgNTEgIDI1IDIzNCAxNDlcbiAgWzgxXSAgMTkgIDE0IDIyNSAxNjAgIDg0IDEyOCAxNjAgIDQyIDE2OSAgMTQgIDMwICAgOCAgNTYgMzIxICAyMiAxMTIgIDc3ICAyNiAgMjYgICA1XG4gWzEwMV0gIDI0ICA4NCAgIDcgIDI0ICAgOCAgNzMgIDIxICAgMyAzNjIgICA0IDE0NSAgODAgMTAzICA1NyAgMjYgIDcwICAxNCAyMTMgMjQxICA0NFxuIFsxMjFdIDE4NiAgNjUgMTAxIDExNyAgIDYgIDcyICAzOCAyMTMgMjAzICAyOCAzMzkgIDQ3ICA2MCAxMTkgICAxICAxMyAgNTkgIDcwIDQzMiAgOTdcbiBbMTQxXSAgOTcgIDQ0ICA0MCAgNDAgIDQwICA0MCAgNTMgMTAxICAzNSAgMzUgIDM1IDEwMSAgMjEgIDM1ICAzNSAxMDEgIDM1ICA0MSAgMzUgMTcyXG4gWzE2MV0gIDg3ICAxOCAxNDkgMTA3ICAxNSAgNTcgIDg0ICAyNCAgOTIgMzI4ICA4OCAgMTAgICAyIDE4MyAgOTYgIDY5ICA2OSAgNTcgIDMzICA5OFxuIFsxODFdICAzMiAgMjYgIDIyIDE2NCAxMTMgIDUwICA4NiAgMTIgMjE2IDIxNiAgIDggIDQxICAgMiAgNTUgIDcwICAzMCAgMTEgICAyICAyNSAgMTVcbiBbMjAxXSAgMTMgIDMwICA1MCAgNTEgIDcyICAgMSAgMTEgIDUwICA0MCAgMTcgICA0ICA1MSAgIDIgICAyICAyMyAgIDcgICA2ICA0MCAgIDQgICA0XG4gWzIyMV0gICAxICAyNSAgMjUgICA3ICAgNyAgIDcgIDUxICAyMiAgIDYgICA1ICAzMCAgMTEgIDMyICAgMiAgMTkgIDUzICAzNCAgMTYgICA1ICAgNFxuIFsyNDFdICAgOSAgMTYgIDExICAgNSAgMTYgIDQ3ICAgOCAgMjEgMjAzICA1NyAgMjAgIDI1ICAyMCAgMTkgIDI0ICAxMSAgMTAgIDM2ICAxMCAgIDFcbiBbMjYxXSAgMTEgIDc1ICA1MyAgNzUgMTEyICAgNiAgIDYgMTQ1ICAyNiAgMTkgIDM5ICA2NiAxMzEgIDExIDEwNiAgIDYgIDI0ICAgOCAgMjAgICA0XG4gWzI4MV0gIDMwICAgNyAgIDMgICA1ICA0NiAxMTUgIDM4ICA0MSAgMTggIDQ3ICAgNyAgMzcgICAyICA2MSAxNjIgIDE0ICAzMCAgIDUgIDQzICA4MlxuIFszMDFdICAgMSAgIDIgIDEwICAgNCAgIDIgIDEyICAxMiAgMTAgICA5ICAyNyAgMjcgMjAzICAxMiAgODQgIDQxICAxNSAgMzMgIDQyICA1NyAgMTlcbiBbMzIxXSAgNDYgIDI1ICAgOCAgNTcgIDExICAyNSAgMjUgIDI5IDQwMiAgMjkgICAyICAxOSAgMzggIDUxICA1MSAgIDkgIDQxICAgMyAgOTEgIDE4XG4gWzM0MV0gICA5ICAxOSAgIDMgIDU5ICAxOSAgMzUgICA0ICAyMyAgNDMgICA1ICA0MiAgMjkgIDQ2ICAgNCAgIDMgIDUxICAxMCAgIDIgIDM1ICA0MVxuIFszNjFdICA2MyAxMjEgIDE2ICAyNyAgMjEgIDE2ICAyMSAxMTYgIDI2ICAxMyAgOTggIDk4ICA1NyAgNDQgIDQ5ICA1NCAgMTIgIDEwICA5OCAgMThcbiBbMzgxXSAgIDQgIDEyICAxOCAgMzYgIDk4ICA5OCAxMTIgMTEyIDExMiAxMTIgMTEyIDEyNyAgMTEgIDY3ICAyMSAgMjkgIDcwICAzMyAgMTIgICAyXG4gWzQwMV0gIDE4IDE1NCAgMjggMjQxIDcyNiAxMDQgMjA2IDE0OSAgNTYgIDg2IDEyMyAxMDkgMTE5ICAyMiAgNDkgIDIyIDIyMyAgMzMgMTMyICA2N1xuIFs0MjFdICAxNiAgNjkgIDc1ICA0OSAgOTMgIDc0ICAxMiAgOTMgICAzICA0NiAxMTQgIDIzIDExNCAgIDYgIDk2ICAzNCAgIDEgIDYwICA4NiAgOTZcbiBbNDQxXSAgODYgIDYwICA5NiAgODYgICA0ICAgOSAgMzAgIDgyICAgNyAgMjUgIDg2ICAxNyAgMzAgIDMwICAyNyAgMjcgIDI5ICAxMiAxMjMgMTYwXG4gWzQ2MV0gIDc4ICA3OCAgNzggIDc4ICA3OCAgNzggIDc4ICA3OCAgNTkgIDEyICAyNCAxMjIgICA5ICAxNSAgIDIgIDE1ICA1MSAgMzggIDE5ICA2MFxuIFs0ODFdICAyMCAgODcgICAxICA1MSAgNTEgMjQxICAxOSAgMTMgICA5ICAxMyAgIDggIDUxICAyNyAgIDQgIDQ1ICA0MCAgNDkgIDg0ICA4NCAgNDlcbiBbNTAxXSAgMTQgICA1IDEwNCAyNzYgMTAxICAxNiAgMTYgMTE0IDI1MyAgNzUgIDczICA2OSAgNzMgIDY5ICA2OSAgNjEgIDU2ICA0NSAxMTggIDQ1XG4gWzUyMV0gIDQ1ICAxMSAxMTggIDYxICAgOSAgNDEgIDMzIDExOSAgMzkgICA4ICAzNSAgNjkgMTE0ICAyOSAxNjQgIDkyICA5MiAgOTIgIDE3ICA1MFxuIFs1NDFdICA1MCAgIDkgIDY3ICAxOSAzMzEgMTM0ICA1MSAxMjAgIDE5ICAyOSAgIDQgICA0ICAxNCAxMjMgMTI3ICAxNyAgMjMgIDg1ICA5MiAgNTZcbiBbNTYxXSAxNDggIDYwICAyNSAxNDYgICAzICA0MSAgIDMgMTM2ICAyOSAgMzYgIDE0ICAyNyAxMDEgMTQ2ICA0NCAgIDEgIDQ0ICA1NyAgMTUgIDEyXG4gWzU4MV0gIDk3ICA3MCAgNDkgIDQ5ICAyMiAgMjIgIDE2IDE1NyAgNzUgIDY3ICAzOSAyMjMgIDQ1ICAzOSAgIDUgMTUwICAxMiAgOTcgIDQxICAzNVxuIFs2MDFdICAxNyAgOTcgIDk3ICAyMyAgNDkgIDIzIDE0MyAgMjMgIDMxICAxMiAxNTAgMTYyICA0NyAgIDQgIDk1ICAyNyAgMTQgICAzICAyOSAgNjdcbiBbNjIxXSAgNDYgIDQwIDExNiAgNTEgMjE3ICAxMyAgIDEgIDEyICAxNiAgMzAgICA5ICA5MiAgIDcgIDI1ICAgMyAgNzEgMTI1ICAyMSAgIDggIDQwXG4gWzY0MV0gIDQwICAxMyAyODggIDU2ICA4NyAgNDAgIDQxICA3MCAyNjEgMTQ0ICAzOCAgMzkgIDcxIDE0OSAxMjUgICA3ICAxMiAxMDQgICA3ICAxNFxuIFs2NjFdIDIyMyAxMTYgIDM1ICA3NCAgIDcgICA2ICAgNyAgMjAgIDIwICAxMSAgIDYgMjUwIDI1MCAgMTAgIDEwICAgNiAxNjQgIDQ4IDE2NCAxNjRcbiBbNjgxXSAgNzcgIDE1IDE0OSAgMTEgMTA2ICAxMiAgMTIgMTQ1IDE0OCAxNDggIDY1IDExOSAxMTkgIDk1IDEzMyAxMzMgIDc1ICAyOCAzMjEgICA4XG4gWzcwMV0gICA4IDEwMSAgNTAgICAzICAgMSAxMjUgIDgwICA2NCAgNjQgMTQyICA3MSAgMTggMTA0ICAyNSAgOTIgICA2ICAyMiAxMjUgMTA0ICAxOFxuIFs3MjFdICAxOCAxMDQgMTA0ICAxOCAzMjEgIDExIDQwMiAxMDQgIDc2ICA3NiAgNzYgIDM3ICAzNyAgNDQgIDM3ICA0NCAgMzcgIDQ0ICAxOCAyNTNcbiBbNzQxXSAgOTIgIDQ4ICA0NCAgMzcgIDQ0IDEyNyAgNTYgMTQzICAyMiAxMDIgMTYyICAyOSAxMjcgIDM2ICAzNyAxMDIgMTYyICAyOSAxMjcgMTAyXG4gWzc2MV0gMTYyICAyOSAgMzYgIDM3IDE2MiAxMDIgMjUzIDEyNyAgMzYgIDM3ICAyOSAgMzYgIDM3IDQwMiAgODcgIDI0ICAyNCAgMTkgMTI1ICA5OVxuIFs3ODFdICA0MiAyNTcgMTE1ICAxNSAgMTEgIDIxIDE2MSAgMTcgIDkzIDExNSAgNjQgMTI4IDExNSAgNjYgMTE1ICAxNCAgNjUgMTU2IDE2MSAgODNcbiBbODAxXSAgMTEgIDEyICA4NCAxMTUgMTA0ICAzMyAgMjggIDY2ICAyMiAgMzggIDM4ICAzOCAgNTkgIDE4ICAyMSAgMjEgIDc3IDE2MiAxNjIgIDMzXG4gWzgyMV0gIDk4ICA2NSAgMjIgMTkzIDExNSAgIDQgMTU2ICAzMiAgMzIgIDk4ICA5OCAgMzIgMTI1ICAyMiAgODYgIDMwICA3OSAgMTQgMTkyICA2OFxuIFs4NDFdIDE4MyAgMzcgMTI3ICAgNCAgMzIgIDcyICAgOCAgMzIgIDcyICA3NCAgNzQgMTI3IDExNSAxNTggIDcyIDExOSAgMzMgIDMzIDExOSAyMTdcbiBbODYxXSAgMjUgMjUzICAzMSAgMzEgIDI1ICA0NiAgNDYgIDcyICAzNyAgOTMgICAzICA4NyAgNTEgMTA0ICA0MSAgNDEgMTA0IDIxNiAxMDcgIDcxXG4gWzg4MV0gIDIyICA0OSAxNjkgMTIxICAgOCAgMzMgMjIzIDEwNSAgMjQgIDUwICAxNiAgMzEgIDQ5IDI0MSAgNTYgIDE1IDM2MiAzMjggMjQxIDE2OVxuIFs5MDFdICA0NiAgMTIgMTAzICA1NiAgNzUgIDY2ICAzNiAgMzUgMjQyICA4NyAgMjcgIDc2ICAxOCAgMjggIDU5IDIyNSAgNDAgIDI2ICAgMyAgNjdcbiBbOTIxXSAxMDggMjE2ICAzMCAyMTYgICA5ICA0MiAyNDIgIDEwIDIxMyAyMjUgIDg2ICA4MiAgODIgIDM1IDM2MiAgMzcgMTI1IDEyNSAgMTIgMjE2XG4gWzk0MV0gIDYxICAyOSAgMzkgMjA0IDExMiAgMTMgMTgzICAzNCAgMzcgMTA2ICAgNCAgNjIgIDg3ICAzNiAyNDEgMTQ4IDE1NCA0MzIgIDY2IDE1MFxuIFs5NjFdIDE1NCAxNTQgMTU0ICA0NCAxMDUgIDEzICAxMyAgNDEgIDUwICAzMyAgMjIgMTg2ICAzNiAgNDIgIDYwICAxOSAgNDAgICA0IDEwMCAgMTRcbiBbOTgxXSAxMjMgIDI3IDExNCAgMjUgMTA1ICAyMyAgMjUgIDk3ICAzMCAgMjggIDcyICAzNSAgMjMgIDI5ICAxMiAxMDYgIDE0IDExNiAgNTkgIDE2XG4gWyByZWFjaGVkIGdldE9wdGlvbihcIm1heC5wcmludFwiKSAtLSBvbWl0dGVkIDEwMTQ5NSBlbnRyaWVzIF1cbiJ9 -->
+<pre><code>   [1] 107  23  56  62  22   9  99  11  22 149  22 149 117  12  33  33 101  65  22  26
+  [21]  26  80 201  28  62  62 164  41   8 102   5  33  11  97  70 285 169   7  84  65
+  [41]  22  46 148 148   2  75 321  22  56  14 206  44  59  67  53  26 273  47  11  51
+  [61]  44  27  25  80 148  27  39  12 321  22  67  51  20 321  40 169  51  25 234 149
+  [81]  19  14 225 160  84 128 160  42 169  14  30   8  56 321  22 112  77  26  26   5
+ [101]  24  84   7  24   8  73  21   3 362   4 145  80 103  57  26  70  14 213 241  44
+ [121] 186  65 101 117   6  72  38 213 203  28 339  47  60 119   1  13  59  70 432  97
+ [141]  97  44  40  40  40  40  53 101  35  35  35 101  21  35  35 101  35  41  35 172
+ [161]  87  18 149 107  15  57  84  24  92 328  88  10   2 183  96  69  69  57  33  98
+ [181]  32  26  22 164 113  50  86  12 216 216   8  41   2  55  70  30  11   2  25  15
+ [201]  13  30  50  51  72   1  11  50  40  17   4  51   2   2  23   7   6  40   4   4
+ [221]   1  25  25   7   7   7  51  22   6   5  30  11  32   2  19  53  34  16   5   4
+ [241]   9  16  11   5  16  47   8  21 203  57  20  25  20  19  24  11  10  36  10   1
+ [261]  11  75  53  75 112   6   6 145  26  19  39  66 131  11 106   6  24   8  20   4
+ [281]  30   7   3   5  46 115  38  41  18  47   7  37   2  61 162  14  30   5  43  82
+ [301]   1   2  10   4   2  12  12  10   9  27  27 203  12  84  41  15  33  42  57  19
+ [321]  46  25   8  57  11  25  25  29 402  29   2  19  38  51  51   9  41   3  91  18
+ [341]   9  19   3  59  19  35   4  23  43   5  42  29  46   4   3  51  10   2  35  41
+ [361]  63 121  16  27  21  16  21 116  26  13  98  98  57  44  49  54  12  10  98  18
+ [381]   4  12  18  36  98  98 112 112 112 112 112 127  11  67  21  29  70  33  12   2
+ [401]  18 154  28 241 726 104 206 149  56  86 123 109 119  22  49  22 223  33 132  67
+ [421]  16  69  75  49  93  74  12  93   3  46 114  23 114   6  96  34   1  60  86  96
+ [441]  86  60  96  86   4   9  30  82   7  25  86  17  30  30  27  27  29  12 123 160
+ [461]  78  78  78  78  78  78  78  78  59  12  24 122   9  15   2  15  51  38  19  60
+ [481]  20  87   1  51  51 241  19  13   9  13   8  51  27   4  45  40  49  84  84  49
+ [501]  14   5 104 276 101  16  16 114 253  75  73  69  73  69  69  61  56  45 118  45
+ [521]  45  11 118  61   9  41  33 119  39   8  35  69 114  29 164  92  92  92  17  50
+ [541]  50   9  67  19 331 134  51 120  19  29   4   4  14 123 127  17  23  85  92  56
+ [561] 148  60  25 146   3  41   3 136  29  36  14  27 101 146  44   1  44  57  15  12
+ [581]  97  70  49  49  22  22  16 157  75  67  39 223  45  39   5 150  12  97  41  35
+ [601]  17  97  97  23  49  23 143  23  31  12 150 162  47   4  95  27  14   3  29  67
+ [621]  46  40 116  51 217  13   1  12  16  30   9  92   7  25   3  71 125  21   8  40
+ [641]  40  13 288  56  87  40  41  70 261 144  38  39  71 149 125   7  12 104   7  14
+ [661] 223 116  35  74   7   6   7  20  20  11   6 250 250  10  10   6 164  48 164 164
+ [681]  77  15 149  11 106  12  12 145 148 148  65 119 119  95 133 133  75  28 321   8
+ [701]   8 101  50   3   1 125  80  64  64 142  71  18 104  25  92   6  22 125 104  18
+ [721]  18 104 104  18 321  11 402 104  76  76  76  37  37  44  37  44  37  44  18 253
+ [741]  92  48  44  37  44 127  56 143  22 102 162  29 127  36  37 102 162  29 127 102
+ [761] 162  29  36  37 162 102 253 127  36  37  29  36  37 402  87  24  24  19 125  99
+ [781]  42 257 115  15  11  21 161  17  93 115  64 128 115  66 115  14  65 156 161  83
+ [801]  11  12  84 115 104  33  28  66  22  38  38  38  59  18  21  21  77 162 162  33
+ [821]  98  65  22 193 115   4 156  32  32  98  98  32 125  22  86  30  79  14 192  68
+ [841] 183  37 127   4  32  72   8  32  72  74  74 127 115 158  72 119  33  33 119 217
+ [861]  25 253  31  31  25  46  46  72  37  93   3  87  51 104  41  41 104 216 107  71
+ [881]  22  49 169 121   8  33 223 105  24  50  16  31  49 241  56  15 362 328 241 169
+ [901]  46  12 103  56  75  66  36  35 242  87  27  76  18  28  59 225  40  26   3  67
+ [921] 108 216  30 216   9  42 242  10 213 225  86  82  82  35 362  37 125 125  12 216
+ [941]  61  29  39 204 112  13 183  34  37 106   4  62  87  36 241 148 154 432  66 150
+ [961] 154 154 154  44 105  13  13  41  50  33  22 186  36  42  60  19  40   4 100  14
+ [981] 123  27 114  25 105  23  25  97  30  28  72  35  23  29  12 106  14 116  59  16
+ [ reached getOption(&quot;max.print&quot;) -- omitted 101495 entries ]</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeURhdGEgJT4lXG4gIGdyb3VwX2J5KOabuOexjemkqOiXj+WcsCkgJT4lXG4gIHN1bW1hcmlzZShcbiAgICBib3Jyb3dDb3VudD1sZW5ndGgo5a246JmfKVxuICApIC0+IHJlc3VsdFxuYGBgIn0= -->
+<pre class="r"><code>libraryData %&gt;%
+  group_by(書籍館藏地) %&gt;%
+  summarise(
+    borrowCount=length(學號)
+  ) -&gt; result</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlczpcbjE6IEluIGdyZXBsKFwifHx8XCIsIHdoYXQsIGZpeGVkID0gVFJVRSkgOlxuICBpbnB1dCBzdHJpbmcgMSBpcyBpbnZhbGlkIGluIHRoaXMgbG9jYWxlXG4yOiBJbiBzY2FuKGZpbGUgPSBmaWxlLCB3aGF0ID0gd2hhdCwgc2VwID0gc2VwLCBxdW90ZSA9IHF1b3RlLCBkZWMgPSBkZWMsICA6XG4gIEVPRiB3aXRoaW4gcXVvdGVkIHN0cmluZ1xuMzogSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning messages:
+1: In grepl(&quot;|||&quot;, what, fixed = TRUE) :
+  input string 1 is invalid in this locale
+2: In scan(file = file, what = what, sep = sep, quote = quote, dec = dec,  :
+  EOF within quoted string
+3: In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVzdWx0XG5gYGAifQ== -->
+<pre class="r"><code>result</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbInRibF9kZiIsInRibCIsImRhdGEuZnJhbWUiXSwibmNvbCI6MiwibnJvdyI6MTh9LCJyZGYiOiJINHNJQUFBQUFBQUFCbTFUdjIvVFFCUysyRWxMRWdpRWRtQkJRbDJBSlZKTEcyWUU4b3hnNmNKZ2dvc2ltYmh5RElYTklVSnBCRkdMYUJ3YUNnV0paS0RrQjBKdHcxQUpBU3RJL0EvYzlTd2gvb1NFZC9aZGkwT0d6M2QrMytmdjNudjNmTzNLL0V4c1BvWVFrcEFjQ1NGSmhtMVlna2NJaFZHVXJmY1JraWM4QVpLUHdYclNJNzEzNUtrQkVjQVlZQnh3Qk1BK1pLWnh3RkVBK3k0Qk9BNDRBVWo2UG9HRHhuVHRucWJudVFKWW0wVW5weFh5cElUYmRieFNwSGFSdk9qaGlzMjVCSERiQmRldWs2MGllZGZoMGZpMHNsLytoRDlVRDRYTXBMcU9lMXRrZWRXdDd1THVjb0FEQjlwNlRoNCtvbTA3d0lFVmJUcTBzQmVRNDA0WHQwdXU4eGhYL3JPaWhWMnkwOEdWT20zdUJiaXBVZHc1WE40bVRwYzlHNjN6WEptY1VXanRKWEZLVUFKVEhsZ2tMeWkvZWkxR2JEaUJQa3pPS3FUV2NEZWZqZUNTc3dwKzY0d2dFbk1LMlhoUFhyK0JadEhhaXBEUEtYNmo2Y2NTY2RiL2FVVmF3WTFhMERyTnUrTTZaZkpxNTVBNFJicFA5OWMyd1J0aXdSc0szSGdrbzZ0NWNlRUhZN0NnWml6RGhGMmZEdzRidUNtWXArdXdYZ0o4QjlGdnlBamkwWXN3Y3o4Z2R0b2J5TkRWczdDdWd1RWFIekkycUdmNFlLYjk0K1hCMElteFc2cWxwaFpNOVk0Mm5HQU9ZaUpCU2N4MSsrZTNCNTl2ZlBuYVZMa3NmdE13VFdQcHNuRTNadzA1UkNHZUVpNnNHQW1haEFhRHdSKy93SUI0M0ZpMHNrWU9wTklFLzdINi9FZGlkU0J1RWVJOUVYdkp0d21MdXNLaWsxcnVkamFuOGJjRVpPSWxrbG8wczVBbnJ4MmkrWlJsV0tvdUlobERGeEgvL1A1Zmxtelg1aVVFQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["書籍館藏地"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["borrowCount"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"1F指定參考書區","2":"34"},{"1":"1F流通櫃檯","2":"2643"},{"1":"1F特展區","2":"65"},{"1":"1F教師成長專區","2":"205"},{"1":"1F通識悅讀專區","2":"1772"},{"1":"1F視聽區","2":"2834"},{"1":"1F寰宇開卷專區","2":"2359"},{"1":"1F職涯博覽專區","2":"1998"},{"1":"1F職涯博覽專區(創新創業)","2":"29"},{"1":"2F藝文展覽區","2":"2"},{"1":"3F中文圖書區","2":"86055"},{"1":"4F日韓文圖書區","2":"144"},{"1":"4F外文圖書區","2":"4244"},{"1":"5F本校特藏","2":"17"},{"1":"5F參考資料區","2":"1"},{"1":"6F套書區","2":"32"},{"1":"6F視聽閉架區","2":"7"},{"1":"民生校區流通櫃檯","2":"54"}],"options":{"columns":{"min":{},"max":[10],"total":[2]},"rows":{"min":[10],"max":[10],"total":[18]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeURhdGEgJT4lXG4gIG11dGF0ZShcbiAgICDlrbjns7sgPSBzdHJfc3ViKOWtuOiZnyAsIDUgLCA2KVxuICApIC0+bGlicmFyeURhdGFcblxuYGBgIn0= -->
+<pre class="r"><code>libraryData %&gt;%
+  mutate(
+    學系 = str_sub(學號 , 5 , 6)
+  ) -&gt;libraryData
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeURhdGEgJT4lXG4gIGdyb3VwX2J5KOWtuOmZoizlhaXlrbjlubQpICU+JVxuICBzdW1tYXJpc2UoXG4gICAgYm9ycm93Q291bnQ9bGVuZ3RoKOWtuOiZnylcbiAgKSAtPiByZXN1bHQyXG5gYGAifQ== -->
+<pre class="r"><code>libraryData %&gt;%
+  group_by(學院,入學年) %&gt;%
+  summarise(
+    borrowCount=length(學號)
+  ) -&gt; result2</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVzdWx0MlxuYGBgIn0= -->
+<pre class="r"><code>result2</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjMsIm5yb3ciOjE4fSwicmRmIjoiSDRzSUFBQUFBQUFBQmd0eWlURGlpdUJpWUdCZ1ltQm1aV1JnWWdZeVdaaUFCQ01EQ3dNbmlLNWdZR0FXQmpLQU1zeThRRm9JTEluQVRFaVlHUW16SUdGV0pNeUd3Q2dXc2VXa2xxWG1GQU5aQWhEWkJwQW96NU5kdTU1TmEzKzZkc2ZMbVl1Z1lrSlBXOWM4YmQzNFpGZjMwKzZaS0RJOHp6WlBmYnF2RzBXTS8vbVNmYy9tTkQ5ZlBoRkZtUFBwMURaVVUxL08zdjFzNWZ3WG05dGZyT2lDeWFDNGtEVTVKN0VZNWtDNHM5TVNrMHZ5aTRDc2YwQU1DNkFVSUU0RjRqUUsyVkR6UlA4eU1JanpNekJJY3pBd2lMVXdNTWlmWjJCUURRR0tQd0R5ZFlIMENhQXlSU0J0RGNRZERBeFNjeGtZbExNWkdCU3FnYTdXQm1KUklOYUFlSWY1UDVvUHVGSVNTeEwxMG9vU2MxUFJQWndIRklONUdCU25JRUdXZmNjMzFFRFpiRXU4OWgxZlZnZFZ6cDJVWDFTVVgrNmNYNXBYZ21ZU0oxQmNEMllheUZOTURVRGkvLy8vN3lBQmg2S1lQYitnSkRNL0Q2aVVTUmlhZ0VCaHl3Vk5jQXhRSXhpaFlRMWpNME9NWVlINWp3VVdRNmw1NlpsNXFWQWVIOUFsWUlmb0ZSUmxBdDBKRFFPZ2FMRmVTWDVKWWc1TUpEay9CeVlDc2Y4ZkFKUE1CaG90QXdBQSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["學院"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["入學年"],"name":[2],"type":["int"],"align":["right"]},{"label":["borrowCount"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"人文學院","2":"100","3":"5629"},{"1":"人文學院","2":"101","3":"5903"},{"1":"人文學院","2":"102","3":"6920"},{"1":"公共事務學院","2":"100","3":"5764"},{"1":"公共事務學院","2":"101","3":"8143"},{"1":"公共事務學院","2":"102","3":"9556"},{"1":"法律學院","2":"100","3":"5600"},{"1":"法律學院","2":"101","3":"5677"},{"1":"法律學院","2":"102","3":"5576"},{"1":"社會科學院","2":"100","3":"4641"},{"1":"社會科學院","2":"101","3":"5435"},{"1":"社會科學院","2":"102","3":"5512"},{"1":"商學院","2":"100","3":"6813"},{"1":"商學院","2":"101","3":"9067"},{"1":"商學院","2":"102","3":"8315"},{"1":"電機資訊學院","2":"100","3":"1323"},{"1":"電機資訊學院","2":"101","3":"1301"},{"1":"電機資訊學院","2":"102","3":"1320"}],"options":{"columns":{"min":{},"max":[10],"total":[3]},"rows":{"min":[10],"max":[10],"total":[18]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZW50ZXJZZWFyIDwtIGFzLmZhY3RvcihsaWJyYXJ5RGF0YSTlhaXlrbjlubQpXG5mb3IgKGkgaW4gc2VxX2Fsb25nKGNvbGxlZ2UpKXtcbiAgZm9yIChqIGluIHNlcV9hbG9uZyhlbnRlclllYXIpKXtcbiAgICBcbiAgfVxufVxuYGBgIn0= -->
+<pre class="r"><code>enterYear &lt;- as.factor(libraryData$入學年)
+for (i in seq_along(college)){
+  for (j in seq_along(enterYear)){
+    
+  }
 }</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeURhdGEgJT4lXG4gIGZpbHRlcijlhaXlrbjlubQgPSAxMDIgLCApICPmjJHlh7rnibnlrprmop3ku7boqIjnrpdcbmBgYCJ9 -->
+<pre class="r"><code>libraryData %&gt;%
+  filter(入學年 = 102 , ) #挑出特定條件計算</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMuZmFjdG9yKGxpYnJhcnlEYXRhJOWtuOiZnykgLT5saWJyYXJ5RGF0YVxuYGBgIn0= -->
+<pre class="r"><code>as.factor(libraryData$學號) -&gt;libraryData</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiVGhlcmUgd2VyZSAxNCB3YXJuaW5ncyAodXNlIHdhcm5pbmdzKCkgdG8gc2VlIHRoZW0pXG4ifQ== -->
+<pre><code>There were 14 warnings (use warnings() to see them)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxueW1kX2htcyhsaWJyYXJ5RGF0YSTlgJ/plrHmmYLplpMsIHR6ID0gXCJBc2lhL1RhaXBlaVwiKSAtPmxpYnJhcnlEYXRhJOWAn+mWseaZgumWk1xuYGBgIn0= -->
+<pre class="r"><code>ymd_hms(libraryData$借閱時間, tz = &quot;Asia/Taipei&quot;) -&gt;libraryData$借閱時間</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gbGlicmFyeURhdGEk5YCf6Zax5pmC6ZaTIDogJCBvcGVyYXRvciBpcyBpbnZhbGlkIGZvciBhdG9taWMgdmVjdG9yc1xuIn0= -->
+<pre><code>Error in libraryData$借閱時間 : $ operator is invalid for atomic vectors</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTgtMTItMTIiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShzdHJpbmdyKQ0KYGBgDQoNCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0KbGlicmFyeURhdGEgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL2xpYnJhcnkxMDBfMTAyLmNzdiIpDQpgYGANCg0KYGBge3J9DQpsaWJyYXJ5RGF0YSTmm7jnsY3ppKjol4/lnLAgPC0gYXMuZmFjdG9yKGxpYnJhcnlEYXRhJOabuOexjemkqOiXj+WcsCkNCmxldmVscyhsaWJyYXJ5RGF0YSTmm7jnsY3ppKjol4/lnLApLT5zdG9yYWdlTG9jYXRpb25zDQojbGlicmFyeURhdGEk5pu457GN6aSo6JeP5ZywICU+JSBhcy5mYWN0b3IgJT4lIGxldmVscyAtPiBzdG9yYWdlTG9jYXRpb25zDQojc3RvcmFnZUxvY2F0aW9ucw0KYGBgDQoNCmBgYHtyfQ0KaTwtIDENCiMgMQ0Kc3RvcmFnZUxvY2F0aW9uX2kgPC0gc3RvcmFnZUxvY2F0aW9uc1tpXSANCiMgMg0KbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGU8LXdoaWNoKGxpYnJhcnlEYXRhJOabuOexjemkqOiXj+WcsD09c3RvcmFnZUxvY2F0aW9uX2kpDQpzdWJzYW1wbGVfaSA8LSBsaWJyYXJ5RGF0YVtudW1lcmljYWxJbmRleEZvclN1YnNhbXBsZSxdDQojIDMNCmJvcnJvd0NvdW50X2kgPC0gbnJvdyhzdWJzYW1wbGVfaSkNCmBgYA0KDQpgYGB7cn0NCiMgMA0KYWxsQm9ycm93Q291bnQgPC0gdmVjdG9yKCJudW1lcmljIiwxOCkNCmk8LSAyDQogICMgMQ0KICBzdG9yYWdlTG9jYXRpb25faSA8LSBzdG9yYWdlTG9jYXRpb25zW2ldIA0KICAjIDINCiAgbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGU8LXdoaWNoKGxpYnJhcnlEYXRhJOabuOexjemkqOiXj+WcsD09c3RvcmFnZUxvY2F0aW9uX2kpDQogIHN1YnNhbXBsZV9pIDwtIGxpYnJhcnlEYXRhW251bWVyaWNhbEluZGV4Rm9yU3Vic2FtcGxlLF0NCiAgIyAzDQogIGJvcnJvd0NvdW50X2kgPC0gbnJvdyhzdWJzYW1wbGVfaSkNCiAgIyA0DQogIGFsbEJvcnJvd0NvdW50W1tpXV08LWJvcnJvd0NvdW50X2kgI1td5LiA5qyh5Y+v6YG45b6I5aSa5L2N5a2QIFtbXV3kuIDmrKHlj6rog73pgbjkuIDlgIvkvY3nva4NCmBgYA0KDQpgYGB7cn0NCmFsbEJvcnJvd0NvdW50IDwtIHZlY3RvcigibnVtZXJpYyIsMTgpDQpmb3IgKGkgaW4gYyAoMToxOCkpew0KICBpPC0gMg0KICAjIDENCiAgc3RvcmFnZUxvY2F0aW9uX2kgPC0gc3RvcmFnZUxvY2F0aW9uc1tpXSANCiAgIyAyDQogIG51bWVyaWNhbEluZGV4Rm9yU3Vic2FtcGxlPC13aGljaChsaWJyYXJ5RGF0YSTmm7jnsY3ppKjol4/lnLA9PXN0b3JhZ2VMb2NhdGlvbl9pKQ0KICBzdWJzYW1wbGVfaSA8LSBsaWJyYXJ5RGF0YVtudW1lcmljYWxJbmRleEZvclN1YnNhbXBsZSxdDQogICMgMw0KICBib3Jyb3dDb3VudF9pIDwtIG5yb3coc3Vic2FtcGxlX2kpDQogICMgNA0KICBhbGxCb3Jyb3dDb3VudFtbaV1dPC1ib3Jyb3dDb3VudF9pDQp9DQpgYGANCg0KYGBge3J9DQojIDANCmFsbEJvcnJvd0NvdW50IDwtIHZlY3RvcigibnVtZXJpYyIsMTgpDQpmb3IoaSBpbiBjKDE6MTgpKXsNCiAgIyAxDQogIHN0b3JhZ2VMb2NhdGlvbl9pIDwtIHN0b3JhZ2VMb2NhdGlvbnNbaV0gDQogICMgMg0KICBudW1lcmljYWxJbmRleEZvclN1YnNhbXBsZTwtd2hpY2gobGlicmFyeURhdGEk5pu457GN6aSo6JeP5ZywPT1zdG9yYWdlTG9jYXRpb25faSkNCiAgc3Vic2FtcGxlX2kgPC0gbGlicmFyeURhdGFbbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGUsXQ0KICAjIDMNCiAgYm9ycm93Q291bnRfaSA8LSBucm93KHN1YnNhbXBsZV9pKQ0KICAjIDQNCiAgYWxsQm9ycm93Q291bnRbW2ldXTwtYm9ycm93Q291bnRfaSAgDQp9DQpgYGANCg0KYGBge3J9DQphcy5mYWN0b3IobGlicmFyeURhdGEk5a246ZmiKSAtPmxpYnJhcnlEYXRhJOWtuOmZog0KbGV2ZWxzKGxpYnJhcnlEYXRhJOWtuOmZoikgLT5jb2xsZWdlDQpgYGANCg0KYGBge3J9DQojIDANCmNvbGxlZ2VCb3Jyb3dDb3VudF9pIDwtIHZlY3RvcigibnVtZXJpYyIsNSkNCmZvcihpIGluIGMoMTo1KSl7DQogICMgMQ0KICBjb2xsZWdlX2kgPC0gY29sbGVnZVtpXSANCiAgIyAyDQogIG51bWVyaWNhbEluZGV4Rm9yU3Vic2FtcGxlPC13aGljaChsaWJyYXJ5RGF0YSTlrbjpmaIgPT0gY29sbGVnZV9pKQ0KICBjb2xsZWdlc3Vic2FtcGxlX2kgPC0gbGlicmFyeURhdGFbbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGUsXQ0KICAjIDMNCiAgY29sbGVnZWJvcnJvd0NvdW50X2kgPC0gbnJvdyhjb2xsZWdlc3Vic2FtcGxlX2kpDQogICMgNA0KICBjb2xsZWdlQm9ycm93Q291bnRbW2ldXTwtY29sbGVnZWJvcnJvd0NvdW50X2kgIA0KfQ0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTgtMTItMTIiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShzdHJpbmdyKQ0KYGBgDQoNCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0KbGlicmFyeURhdGEgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL2xpYnJhcnkxMDBfMTAyLmNzdiIpDQpgYGANCg0KYGBge3J9DQpsaWJyYXJ5RGF0YSTmm7jnsY3ppKjol4/lnLAgPC0gYXMuZmFjdG9yKGxpYnJhcnlEYXRhJOabuOexjemkqOiXj+WcsCkNCmxldmVscyhsaWJyYXJ5RGF0YSTmm7jnsY3ppKjol4/lnLApLT5zdG9yYWdlTG9jYXRpb25zDQojbGlicmFyeURhdGEk5pu457GN6aSo6JeP5ZywICU+JSBhcy5mYWN0b3IgJT4lIGxldmVscyAtPiBzdG9yYWdlTG9jYXRpb25zDQojc3RvcmFnZUxvY2F0aW9ucw0KYGBgDQoNCmBgYHtyfQ0KaTwtIDENCiMgMQ0Kc3RvcmFnZUxvY2F0aW9uX2kgPC0gc3RvcmFnZUxvY2F0aW9uc1tpXSANCiMgMg0KbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGU8LXdoaWNoKGxpYnJhcnlEYXRhJOabuOexjemkqOiXj+WcsD09c3RvcmFnZUxvY2F0aW9uX2kpDQpzdWJzYW1wbGVfaSA8LSBsaWJyYXJ5RGF0YVtudW1lcmljYWxJbmRleEZvclN1YnNhbXBsZSxdDQojIDMNCmJvcnJvd0NvdW50X2kgPC0gbnJvdyhzdWJzYW1wbGVfaSkNCmBgYA0KDQpgYGB7cn0NCiMgMA0KYWxsQm9ycm93Q291bnQgPC0gdmVjdG9yKCJudW1lcmljIiwxOCkNCmk8LSAyDQogICMgMQ0KICBzdG9yYWdlTG9jYXRpb25faSA8LSBzdG9yYWdlTG9jYXRpb25zW2ldIA0KICAjIDINCiAgbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGU8LXdoaWNoKGxpYnJhcnlEYXRhJOabuOexjemkqOiXj+WcsD09c3RvcmFnZUxvY2F0aW9uX2kpDQogIHN1YnNhbXBsZV9pIDwtIGxpYnJhcnlEYXRhW251bWVyaWNhbEluZGV4Rm9yU3Vic2FtcGxlLF0NCiAgIyAzDQogIGJvcnJvd0NvdW50X2kgPC0gbnJvdyhzdWJzYW1wbGVfaSkNCiAgIyA0DQogIGFsbEJvcnJvd0NvdW50W1tpXV08LWJvcnJvd0NvdW50X2kgI1td5LiA5qyh5Y+v6YG45b6I5aSa5L2N5a2QIFtbXV3kuIDmrKHlj6rog73pgbjkuIDlgIvkvY3nva4NCmBgYA0KDQpgYGB7cn0NCmFsbEJvcnJvd0NvdW50IDwtIHZlY3RvcigibnVtZXJpYyIsMTgpDQpmb3IgKGkgaW4gYyAoMToxOCkpew0KICBpPC0gMg0KICAjIDENCiAgc3RvcmFnZUxvY2F0aW9uX2kgPC0gc3RvcmFnZUxvY2F0aW9uc1tpXSANCiAgIyAyDQogIG51bWVyaWNhbEluZGV4Rm9yU3Vic2FtcGxlPC13aGljaChsaWJyYXJ5RGF0YSTmm7jnsY3ppKjol4/lnLA9PXN0b3JhZ2VMb2NhdGlvbl9pKQ0KICBzdWJzYW1wbGVfaSA8LSBsaWJyYXJ5RGF0YVtudW1lcmljYWxJbmRleEZvclN1YnNhbXBsZSxdDQogICMgMw0KICBib3Jyb3dDb3VudF9pIDwtIG5yb3coc3Vic2FtcGxlX2kpDQogICMgNA0KICBhbGxCb3Jyb3dDb3VudFtbaV1dPC1ib3Jyb3dDb3VudF9pDQp9DQpgYGANCg0KYGBge3J9DQojIDANCmFsbEJvcnJvd0NvdW50IDwtIHZlY3RvcigibnVtZXJpYyIsMTgpDQpmb3IoaSBpbiBjKDE6MTgpKXsNCiAgIyAxDQogIHN0b3JhZ2VMb2NhdGlvbl9pIDwtIHN0b3JhZ2VMb2NhdGlvbnNbaV0gDQogICMgMg0KICBudW1lcmljYWxJbmRleEZvclN1YnNhbXBsZTwtd2hpY2gobGlicmFyeURhdGEk5pu457GN6aSo6JeP5ZywPT1zdG9yYWdlTG9jYXRpb25faSkNCiAgc3Vic2FtcGxlX2kgPC0gbGlicmFyeURhdGFbbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGUsXQ0KICAjIDMNCiAgYm9ycm93Q291bnRfaSA8LSBucm93KHN1YnNhbXBsZV9pKQ0KICAjIDQNCiAgYWxsQm9ycm93Q291bnRbW2ldXTwtYm9ycm93Q291bnRfaSAgDQp9DQpgYGANCg0KYGBge3J9DQphcy5mYWN0b3IobGlicmFyeURhdGEk5a246ZmiKSAtPmxpYnJhcnlEYXRhJOWtuOmZog0KbGV2ZWxzKGxpYnJhcnlEYXRhJOWtuOmZoikgLT5jb2xsZWdlDQpgYGANCg0KYGBge3J9DQojIDANCmNvbGxlZ2VCb3Jyb3dDb3VudCA8LSB2ZWN0b3IoIm51bWVyaWMiLGxlbmd0aChjb2xsZWdlKSkgI+iuiuaVuOS4jemcgOimgV9pDQpmb3IoaSBpbiBjKDE6bGVuZ3RoKGNvbGxlZ2UpKSl7DQogICMgMQ0KICBjb2xsZWdlX2kgPC0gY29sbGVnZVtpXSANCiAgIyAyDQogIG51bWVyaWNhbEluZGV4Rm9yU3Vic2FtcGxlPC13aGljaChsaWJyYXJ5RGF0YSTlrbjpmaIgPT0gY29sbGVnZV9pKQ0KICBjb2xsZWdlc3Vic2FtcGxlX2kgPC0gbGlicmFyeURhdGFbbnVtZXJpY2FsSW5kZXhGb3JTdWJzYW1wbGUsXQ0KICAjIDMNCiAgY29sbGVnZWJvcnJvd0NvdW50X2kgPC0gbnJvdyhjb2xsZWdlc3Vic2FtcGxlX2kpDQogICMgNA0KICBjb2xsZWdlQm9ycm93Q291bnRbW2ldXTwtY29sbGVnZWJvcnJvd0NvdW50X2kgIA0KfQ0KbmFtZXMoY29sbGVnZUJvcnJvd0NvdW50KSA8LSBjb2xsZWdlDQpgYGANCg0KYGBge3J9DQphcy5mYWN0b3IobGlicmFyeURhdGEk5a246JmfKSAtPnN0dVN1YnNhbXBsZQ0KIyBsaWJyYXJ5RGF0YSTlrbjomZ8gJT4lIHVuaXF1ZSAtPnN0dQ0Kc3R1Qm9ycm93IDwtIHZlY3RvcigibnVtZXJpYyIgLCBsZW5ndGgoc3R1KSkgI2ZvciBpIGluIHNlcV9hbG9uZyhzdHUpDQpmb3IgKGkgaW4gYygxOmxlbmd0aChzdHUpKSl7DQogIHN0dV9pIDwtIHN0dVtpXQ0KICANCiAgc3R1U3Vic2FtcGxlIDwtd2hpY2gobGlicmFyeURhdGEk5a246JmfID09IHN0dV9pKQ0KICANCiAgc3R1U3ViX2kgPC1saWJyYXJ5RGF0YVtzdHVTdWJzYW1wbGUsXQ0KICANCiAgc3R1Qm9ycm93X2kgPC1ucm93KHN0dVN1Yl9pKQ0KICANCiAgc3R1Qm9ycm93W1tpXV0gPC1zdHVCb3Jyb3dfaQ0KfQ0KYGBgDQoNCmBgYHtyfQ0KbGlicmFyeURhdGEgJT4lDQogIGdyb3VwX2J5KOabuOexjemkqOiXj+WcsCkgJT4lDQogIHN1bW1hcmlzZSgNCiAgICBib3Jyb3dDb3VudD1sZW5ndGgo5a246JmfKQ0KICApIC0+IHJlc3VsdA0KcmVzdWx0DQpgYGANCg0KYGBge3J9DQpsaWJyYXJ5RGF0YSAlPiUNCiAgbXV0YXRlKA0KICAgIOWtuOezuyA9IHN0cl9zdWIo5a246JmfICwgNSAsIDYpDQogICkgLT5saWJyYXJ5RGF0YQ0KYGBgDQoNCmBgYHtyfQ0KbGlicmFyeURhdGEgJT4lDQogIGdyb3VwX2J5KOWtuOmZoizlhaXlrbjlubQpICU+JQ0KICBzdW1tYXJpc2UoDQogICAgYm9ycm93Q291bnQ9bGVuZ3RoKOWtuOiZnykNCiAgKSAtPiByZXN1bHQyDQpyZXN1bHQyDQpgYGANCg0KYGBge3J9DQplbnRlclllYXIgPC0gYXMuZmFjdG9yKGxpYnJhcnlEYXRhJOWFpeWtuOW5tCkNCmZvciAoaSBpbiBzZXFfYWxvbmcoY29sbGVnZSkpew0KICBmb3IgKGogaW4gc2VxX2Fsb25nKGVudGVyWWVhcikpew0KICAgIA0KICB9DQp9DQpgYGANCg0KYGBge3J9DQpsaWJyYXJ5RGF0YSAlPiUNCiAgZmlsdGVyKOWFpeWtuOW5tCA9IDEwMiAsICkgI+aMkeWHuueJueWumuaineS7tuioiOeulw0KYGBgDQoNCmBgYHtyfQ0KYXMuZmFjdG9yKGxpYnJhcnlEYXRhJOWtuOiZnykgLT5saWJyYXJ5RGF0YQ0KeW1kX2htcyhsaWJyYXJ5RGF0YSTlgJ/plrHmmYLplpMsIHR6ID0gIkFzaWEvVGFpcGVpIikgLT5saWJyYXJ5RGF0YSTlgJ/plrHmmYLplpMNCg0KZ3JvdXBfYnkobGlicmFyeURhdGEk5a246JmfKSAlPiUNCiAgc3VtbWFyaXNlKA0KICAgIGZpcnN0Qm9ycnJvdyA9IG1pbihsaWJyYXJ5RGF0YSTlgJ/plrHmmYLplpMpDQogICkgLT5yZXN1bHQzDQpyZXN1bHQzDQpgYGANCg0K</div>
 
 
 
