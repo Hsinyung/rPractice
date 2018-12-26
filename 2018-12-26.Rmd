@@ -1,0 +1,89 @@
+---
+title: "2018-12-26"
+output: html_notebook
+---
+
+
+
+```{r}
+library(readr)
+filmVotingData <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/%E7%AC%AC%E4%B8%89%E5%B1%86%E7%B6%93%E6%BF%9F%E6%92%AD%E5%AE%A2%E7%AB%B6%E8%B3%BD%E5%8F%83%E8%B3%BD%E4%BD%9C%E5%93%81%E6%8A%95%E7%A5%A8%E7%B5%90%E6%9E%9C%E6%A8%A3%E6%9C%AC%20-%20Sheet1.csv")
+```
+
+```{r}
+library(plotly)
+```
+
+```{r}
+plasticContainer <- list(
+  greenBox=c("paper","scissor"),     # location 1
+  redBox=c(1L,3L,2.5),               # location 2
+  blueBox=c(TRUE,FALSE,TRUE,TRUE)    # location 3
+)
+```
+
+```{r}
+plasticContainer[c("greenBox","redBox")] # or plasticContainer[c(1,2)]
+```
+
+```{r}
+plasticContainer[c("greenBox")] # or plasticContainer[c(1,2)]
+```
+
+```{r}
+plasticContainer["greenBox"][1] # [1]是從 plasticContainer 裡面拿
+
+plasticContainer["greenBox"]$greenBox[1]
+```
+
+
+
+```{r}
+plasticContainer[[c("greenBox")]][1] #取出 element
+```
+
+```{r}
+plasticContainer$greenBox[[1]] #取出 element
+```
+
+```{r}
+install.packages("plotly")
+```
+
+```{r}
+download.file("https://github.com/tpemartin/github-data/blob/master/plotly_4070_neda.Rda?raw=true",destfile = "plotly_4070_neda.Rda")
+load("plotly_4070_neda.Rda")
+library(plotly)
+plotly_4070_neda 
+```
+
+```{r}
+plotly_4070_neda$x$layout$shapes[[1]]$opacity
+```
+
+```{r}
+plotly_4070_neda$x$layout$shapes[[1]]$opacity <-0.9
+plotly_4070_neda
+```
+
+```{r}
+library(readr)
+transcriptData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/transcript100_102.csv",
+                  col_types = cols(
+                    學期成績="n"
+                  ))
+
+totalCredits<-function(x){
+  transcriptData[transcriptData$學號==x,]->subsample 
+  subsample %>%
+    mutate(
+      及格=(學期成績>=60)
+    ) %>%
+    summarise(
+      學號=學號[1],
+      總修習學分數=sum(學分數),
+      總實得學分數=sum(學分數[及格])
+    )  
+}
+```
+
