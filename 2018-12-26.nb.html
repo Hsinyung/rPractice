@@ -178,24 +178,9 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmZpbG1Wb3RpbmdEYXRhIDwtIHJlYWRfY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9jb3Vyc2UtMTA3LTEtcHJvZ3JhbW1pbmctZm9yLWRhdGEtc2NpZW5jZS9tYXN0ZXIvZGF0YS8lRTclQUMlQUMlRTQlQjglODklRTUlQjElODYlRTclQjYlOTMlRTYlQkYlOUYlRTYlOTIlQUQlRTUlQUUlQTIlRTclQUIlQjYlRTglQjMlQkQlRTUlOEYlODMlRTglQjMlQkQlRTQlQkQlOUMlRTUlOTMlODElRTYlOEElOTUlRTclQTUlQTglRTclQjUlOTAlRTYlOUUlOUMlRTYlQTglQTMlRTYlOUMlQUMlMjAtJTIwU2hlZXQxLmNzdlwiKVxuYGBgIn0= -->
-<pre class="r"><code>library(readr)
-filmVotingData &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/%E7%AC%AC%E4%B8%89%E5%B1%86%E7%B6%93%E6%BF%9F%E6%92%AD%E5%AE%A2%E7%AB%B6%E8%B3%BD%E5%8F%83%E8%B3%BD%E4%BD%9C%E5%93%81%E6%8A%95%E7%A5%A8%E7%B5%90%E6%9E%9C%E6%A8%A3%E6%9C%AC%20-%20Sheet1.csv&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICBUaW1lc3RhbXAgPSBjb2xfY2hhcmFjdGVyKCksXG4gIGClWKXNpuikuKZ+pOuk6aFdxefD0qW7pEilzqFeYCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgvdC/777cp0GzzLPfxXequrx2pPmkR7OhID0gY29sX2NoYXJhY3RlcigpXG4pXG4ifQ== -->
-<pre><code>Parsed with column specification:
-cols(
-  Timestamp = col_character(),
-  `愼㸵X愼㸵ͦ褸愼㸶~愼㸴攼㹢愼㸴攼㸹愼㸱]挼㸵攼㸷挼㸳ҥ戼㹢愼㸴H愼㸵Ρ^` = col_character(),
-  戼㹤п攼㹦戼㹥ܧA戼㸳̳搼㹦挼㸵w愼㹡戼㹡戼㹣v愼㸴昼㸹愼㸴G戼㸳愼㸱 = col_character()
-)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShwbG90bHkpXG5gYGAifQ== -->
-<pre class="r"><code>library(plotly)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShwbG90bHkpXG5saWJyYXJ5KHN0cmluZ3IpXG5gYGAifQ== -->
+<pre class="r"><code>library(plotly)
+library(stringr)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -257,9 +242,18 @@ In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxhc3RpY0NvbnRhaW5lcltbYyhcImdyZWVuQm94XCIpXV1bMV0gI+WPluWHuiBlbGVtZW50XG5gYGAifQ== -->
-<pre class="r"><code>plasticContainer[[c(&quot;greenBox&quot;)]][1] #取出 element</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxhc3RpY0NvbnRhaW5lcltbYyhcImdyZWVuQm94XCIpXV1bMV0gI+WPluWHuiBlbGVtZW50XG5cbmBgYCJ9 -->
+<pre class="r"><code>plasticContainer[[c(&quot;greenBox&quot;)]][1] #取出 element
+</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicGFwZXJcIlxuIn0= -->
+<pre><code>[1] &quot;paper&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -267,6 +261,14 @@ In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxhc3RpY0NvbnRhaW5lciRncmVlbkJveFtbMV1dICPlj5blh7ogZWxlbWVudFxuYGBgIn0= -->
 <pre class="r"><code>plasticContainer$greenBox[[1]] #取出 element</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwicGFwZXJcIlxuIn0= -->
+<pre><code>[1] &quot;paper&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -281,19 +283,12 @@ In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZG93bmxvYWQuZmlsZShcImh0dHBzOi8vZ2l0aHViLmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvYmxvYi9tYXN0ZXIvcGxvdGx5XzQwNzBfbmVkYS5SZGE/cmF3PXRydWVcIixkZXN0ZmlsZSA9IFwicGxvdGx5XzQwNzBfbmVkYS5SZGFcIilcbmBgYCJ9 -->
-<pre class="r"><code>download.file(&quot;https://github.com/tpemartin/github-data/blob/master/plotly_4070_neda.Rda?raw=true&quot;,destfile = &quot;plotly_4070_neda.Rda&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2V0d2QoKVxuXG5gYGAifQ== -->
+<pre class="r"><code>getwd()
+</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoidHJ5aW5nIFVSTCAnaHR0cHM6Ly9naXRodWIuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9ibG9iL21hc3Rlci9wbG90bHlfNDA3MF9uZWRhLlJkYT9yYXc9dHJ1ZSdcbkNvbnRlbnQgdHlwZSAnYXBwbGljYXRpb24vb2N0ZXQtc3RyZWFtJyBsZW5ndGggMTI0MDAgYnl0ZXMgKDEyIEtCKVxuZG93bmxvYWRlZCAxMiBLQlxuIn0= -->
-<pre><code>trying URL 'https://github.com/tpemartin/github-data/blob/master/plotly_4070_neda.Rda?raw=true'
-Content type 'application/octet-stream' length 12400 bytes (12 KB)
-downloaded 12 KB</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubG9hZChcInBsb3RseV80MDcwX25lZGEuUmRhXCIpXG5gYGAifQ== -->
-<pre class="r"><code>load(&quot;plotly_4070_neda.Rda&quot;)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gbG9hZChcInBsb3RseV80MDcwX25lZGEuUmRhXCIpIDogZXJyb3IgcmVhZGluZyBmcm9tIGNvbm5lY3Rpb25cbiJ9 -->
-<pre><code>Error in load(&quot;plotly_4070_neda.Rda&quot;) : error reading from connection</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiRDovclByYWN0aWNlXCJcbiJ9 -->
+<pre><code>[1] &quot;D:/rPractice&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -343,8 +338,136 @@ totalCredits&lt;-function(x){
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudHJhbnNjcmlwdERhdGEgJT4lXG4gIGZpbHRlcijlrbjlsYY9PTEwMCxzdHJfc3ViKOWtuOiZnyw1LDYpPT1cIlAxXCIpIC0+IHN1YnNhbXBsZVxuYGBgIn0= -->
+<pre class="r"><code>transcriptData %&gt;%
+  filter(學屆==100,str_sub(學號,5,6)==&quot;P1&quot;) -&gt; subsample</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3Vic2FtcGxlJOWtuOiZnyAlPiUgdW5pcXVlIC0+IOespuWQiOaineS7tuWtuOiZn1xuYGBgIn0= -->
+<pre class="r"><code>subsample$學號 %&gt;% unique -&gt; 符合條件學號</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAwXG5jcmVkaXRSZXN1bHRzPC12ZWN0b3IoXCJsaXN0XCIsbGVuZ3RoKOespuWQiOaineS7tuWtuOiZnykpXG5gYGAifQ== -->
+<pre class="r"><code># 0
+creditResults&lt;-vector(&quot;list&quot;,length(符合條件學號))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAxXG5pIDwtIDFcbuespuWQiOaineS7tuWtuOiZn1tpXVxuYGBgIn0= -->
+<pre class="r"><code># 1
+i &lt;- 1
+符合條件學號[i]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZDU1ZFAxMDUyXCJcbiJ9 -->
+<pre><code>[1] &quot;d55dP1052&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAyXG5jcmVkaXRSZXN1bHRzW1tpXV0gPC0gdG90YWxDcmVkaXRzKOespuWQiOaineS7tuWtuOiZn1tpXSlcbmBgYCJ9 -->
+<pre class="r"><code># 2
+creditResults[[i]] &lt;- totalCredits(符合條件學號[i])</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9yKGkgaW4gc2VxX2Fsb25nKOespuWQiOaineS7tuWtuOiZnykpe1xuICBjcmVkaXRSZXN1bHRzW1tpXV0gPC0gdG90YWxDcmVkaXRzKOespuWQiOaineS7tuWtuOiZn1tpXSlcbn0gIyBjcmVkaXRSZXN1bHRzW1tpXV0g54K65YSy5a2Y5a655ZmoIFxuYGBgIn0= -->
+<pre class="r"><code>for(i in seq_along(符合條件學號)){
+  creditResults[[i]] &lt;- totalCredits(符合條件學號[i])
+} # creditResults[[i]] 為儲存容器 </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<div id="nest-data-frame" class="section level1">
+<h1>nest data frame</h1>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmxpYnJhcnkodGlkeXIpXG5saWJyYXJ5RGF0YSA8LSByZWFkX2NzdihcImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL2xpYnJhcnlEYXRhMi5jc3ZcIilcbmBgYCJ9 -->
+<pre class="r"><code>library(readr)
+library(tidyr)
+libraryData &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/libraryData2.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiUGFyc2VkIHdpdGggY29sdW1uIHNwZWNpZmljYXRpb246XG5jb2xzKFxuICC+x7i5ID0gY29sX2NoYXJhY3RlcigpLFxuICCu0cR5w/6nTyA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgrtHEeaZXutkgPSBjb2xfY2hhcmFjdGVyKCksXG4gIK7RxHmlWKqppOm0wSA9IGNvbF9pbnRlZ2VyKCksXG4gIK7RxHnAXcLDpmEgPSBjb2xfY2hhcmFjdGVyKCksXG4gIK7RxHmkV6xbpn6k6yA9IGNvbF9kYXRlKGZvcm1hdCA9IFwiXCIpLFxuICCkSr7Hpn4gPSBjb2xfaW50ZWdlcigpLFxuICDFqqrMpn6vxSA9IGNvbF9pbnRlZ2VyKCksXG4gIL7HsHwgPSBjb2xfY2hhcmFjdGVyKCksXG4gIK3Jvlxcrsm2oSA9IGNvbF9kYXRldGltZShmb3JtYXQgPSBcIlwiKSxcbiAgvse0wSA9IGNvbF9pbnRlZ2VyKCksXG4gIL7Hpn4gPSBjb2xfaW50ZWdlcigpLFxuICC+x6h0ID0gY29sX2NoYXJhY3RlcigpXG4pXG4ifQ== -->
+<pre><code>Parsed with column specification:
+cols(
+  戼㹥Ǹ戼㸹 = col_character(),
+  愼㹥搼㸱挼㸴y挼㸳昼㹥愼㸷O = col_character(),
+  愼㹥搼㸱挼㸴y愼㸶W戼㹡搼㸹 = col_character(),
+  愼㹥搼㸱挼㸴y愼㸵X愼㹡愼㸹愼㸴攼㸹戼㸴挼㸱 = col_integer(),
+  愼㹥搼㸱挼㸴y挼㸰]挼㸲æa = col_character(),
+  愼㹥搼㸱挼㸴y愼㸴W愼㹣[愼㸶~愼㸴攼㹢 = col_date(format = &quot;&quot;),
+  愼㸴J戼㹥Ǧ~ = col_integer(),
+  Ū愼㹡̦~愼㹦挼㸵 = col_integer(),
+  戼㹥ǰ| = col_character(),
+  愼㹤ɾ\愼㹥ɶ愼㸱 = col_datetime(format = &quot;&quot;),
+  戼㹥Ǵ挼㸱 = col_integer(),
+  戼㹥Ǧ~ = col_integer(),
+  戼㹥Ǩt = col_character()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeURhdGEgJT4lXG4gIGdyb3VwX2J5KOWtuOmZoikgJT4lXG4gIG5lc3QoLmtleT1cIuWQhOmZouWAn+mWseizh+aWmVwiKSAtPlxuICBsaWJyYXJ5RGF0YU5lc3RlZFxuYGBgIn0= -->
+<pre class="r"><code>libraryData %&gt;%
+  group_by(學院) %&gt;%
+  nest(.key=&quot;各院借閱資料&quot;) -&gt;
+  libraryDataNested</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
+<pre class="r"><code>library(dplyr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBtZXNzYWdlOlxuSW4gc3Ryc3BsaXQoY29kZSwgXCJcXG5cIiwgZml4ZWQgPSBUUlVFKSA6XG4gIGlucHV0IHN0cmluZyAxIGlzIGludmFsaWQgaW4gdGhpcyBsb2NhbGVcbiJ9 -->
+<pre><code>Warning message:
+In strsplit(code, &quot;\n&quot;, fixed = TRUE) :
+  input string 1 is invalid in this locale</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeURhdGEgJT4lXG4gIGdyb3VwX2J5KOWtuOW5tCzlrbjomZ8pICU+JVxuICBzdW1tYXJpc2UoXG4gICAg5a245bm057i95YCf6Zax5YaK5pW4ID0gbigpXG4gICkgLT4gbGlicmFyeURhdGEyXG5gYGAifQ== -->
+<pre class="r"><code>libraryData %&gt;%
+  group_by(學年,學號) %&gt;%
+  summarise(
+    學年總借閱冊數 = n()
+  ) -&gt; libraryData2</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmRmIDwtIGRhdGEuZnJhbWUoXG4gIHggPSAxOjMsXG4gIHkgPSBjKFwiYVwiLCBcImQsZSxmXCIsIFwiZyxoXCIpLFxuICBzdHJpbmdzQXNGYWN0b3JzID0gRlxuKVxuZGYgJT4lXG4gIG11dGF0ZSh5ID0gc3RyX3NwbGl0KHksIFwiLFwiKSkgLT4gZGZTcGxpdFxuYGBgIn0= -->
+<pre class="r"><code>library(dplyr)
+df &lt;- data.frame(
+  x = 1:3,
+  y = c(&quot;a&quot;, &quot;d,e,f&quot;, &quot;g,h&quot;),
+  stringsAsFactors = F
+)
+df %&gt;%
+  mutate(y = str_split(y, &quot;,&quot;)) -&gt; dfSplit</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTgtMTItMjYiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0KZmlsbVZvdGluZ0RhdGEgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vY291cnNlLTEwNy0xLXByb2dyYW1taW5nLWZvci1kYXRhLXNjaWVuY2UvbWFzdGVyL2RhdGEvJUU3JUFDJUFDJUU0JUI4JTg5JUU1JUIxJTg2JUU3JUI2JTkzJUU2JUJGJTlGJUU2JTkyJUFEJUU1JUFFJUEyJUU3JUFCJUI2JUU4JUIzJUJEJUU1JThGJTgzJUU4JUIzJUJEJUU0JUJEJTlDJUU1JTkzJTgxJUU2JThBJTk1JUU3JUE1JUE4JUU3JUI1JTkwJUU2JTlFJTlDJUU2JUE4JUEzJUU2JTlDJUFDJTIwLSUyMFNoZWV0MS5jc3YiKQ0KYGBgDQoNCmBgYHtyfQ0KbGlicmFyeShwbG90bHkpDQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyIDwtIGxpc3QoDQogIGdyZWVuQm94PWMoInBhcGVyIiwic2Npc3NvciIpLCAgICAgIyBsb2NhdGlvbiAxDQogIHJlZEJveD1jKDFMLDNMLDIuNSksICAgICAgICAgICAgICAgIyBsb2NhdGlvbiAyDQogIGJsdWVCb3g9YyhUUlVFLEZBTFNFLFRSVUUsVFJVRSkgICAgIyBsb2NhdGlvbiAzDQopDQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyW2MoImdyZWVuQm94IiwicmVkQm94IildICMgb3IgcGxhc3RpY0NvbnRhaW5lcltjKDEsMildDQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyW2MoImdyZWVuQm94IildICMgb3IgcGxhc3RpY0NvbnRhaW5lcltjKDEsMildDQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyWyJncmVlbkJveCJdWzFdICMgWzFd5piv5b6eIHBsYXN0aWNDb250YWluZXIg6KOh6Z2i5ou/DQoNCnBsYXN0aWNDb250YWluZXJbImdyZWVuQm94Il0kZ3JlZW5Cb3hbMV0NCmBgYA0KDQoNCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyW1tjKCJncmVlbkJveCIpXV1bMV0gI+WPluWHuiBlbGVtZW50DQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyJGdyZWVuQm94W1sxXV0gI+WPluWHuiBlbGVtZW50DQpgYGANCg0KYGBge3J9DQppbnN0YWxsLnBhY2thZ2VzKCJwbG90bHkiKQ0KYGBgDQoNCmBgYHtyfQ0KZG93bmxvYWQuZmlsZSgiaHR0cHM6Ly9naXRodWIuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9ibG9iL21hc3Rlci9wbG90bHlfNDA3MF9uZWRhLlJkYT9yYXc9dHJ1ZSIsZGVzdGZpbGUgPSAicGxvdGx5XzQwNzBfbmVkYS5SZGEiKQ0KbG9hZCgicGxvdGx5XzQwNzBfbmVkYS5SZGEiKQ0KbGlicmFyeShwbG90bHkpDQpwbG90bHlfNDA3MF9uZWRhIA0KYGBgDQoNCmBgYHtyfQ0KcGxvdGx5XzQwNzBfbmVkYSR4JGxheW91dCRzaGFwZXNbWzFdXSRvcGFjaXR5DQpgYGANCg0KYGBge3J9DQpwbG90bHlfNDA3MF9uZWRhJHgkbGF5b3V0JHNoYXBlc1tbMV1dJG9wYWNpdHkgPC0wLjkNCnBsb3RseV80MDcwX25lZGENCmBgYA0KDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQp0cmFuc2NyaXB0RGF0YSA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9tYXN0ZXIvdHJhbnNjcmlwdDEwMF8xMDIuY3N2IiwNCiAgICAgICAgICAgICAgICAgIGNvbF90eXBlcyA9IGNvbHMoDQogICAgICAgICAgICAgICAgICAgIOWtuOacn+aIkOe4vj0ibiINCiAgICAgICAgICAgICAgICAgICkpDQoNCnRvdGFsQ3JlZGl0czwtZnVuY3Rpb24oeCl7DQogIHRyYW5zY3JpcHREYXRhW3RyYW5zY3JpcHREYXRhJOWtuOiZnz09eCxdLT5zdWJzYW1wbGUgDQogIHN1YnNhbXBsZSAlPiUNCiAgICBtdXRhdGUoDQogICAgICDlj4rmoLw9KOWtuOacn+aIkOe4vj49NjApDQogICAgKSAlPiUNCiAgICBzdW1tYXJpc2UoDQogICAgICDlrbjomZ895a246JmfWzFdLA0KICAgICAg57i95L+u57+S5a245YiG5pW4PXN1bSjlrbjliIbmlbgpLA0KICAgICAg57i95a+m5b6X5a245YiG5pW4PXN1bSjlrbjliIbmlbhb5Y+K5qC8XSkNCiAgICApICANCn0NCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTgtMTItMjYiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQoNCg0KDQoNCmBgYHtyfQ0KbGlicmFyeShwbG90bHkpDQpsaWJyYXJ5KHN0cmluZ3IpDQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyIDwtIGxpc3QoDQogIGdyZWVuQm94PWMoInBhcGVyIiwic2Npc3NvciIpLCAgICAgIyBsb2NhdGlvbiAxDQogIHJlZEJveD1jKDFMLDNMLDIuNSksICAgICAgICAgICAgICAgIyBsb2NhdGlvbiAyDQogIGJsdWVCb3g9YyhUUlVFLEZBTFNFLFRSVUUsVFJVRSkgICAgIyBsb2NhdGlvbiAzDQopDQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyW2MoImdyZWVuQm94IiwicmVkQm94IildICMgb3IgcGxhc3RpY0NvbnRhaW5lcltjKDEsMildDQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyW2MoImdyZWVuQm94IildICMgb3IgcGxhc3RpY0NvbnRhaW5lcltjKDEsMildDQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyWyJncmVlbkJveCJdWzFdICMgWzFd5piv5b6eIHBsYXN0aWNDb250YWluZXIg6KOh6Z2i5ou/DQoNCnBsYXN0aWNDb250YWluZXJbImdyZWVuQm94Il0kZ3JlZW5Cb3hbMV0NCmBgYA0KDQoNCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyW1tjKCJncmVlbkJveCIpXV1bMV0gI+WPluWHuiBlbGVtZW50DQpgYGANCg0KYGBge3J9DQpwbGFzdGljQ29udGFpbmVyJGdyZWVuQm94W1sxXV0gI+WPluWHuiBlbGVtZW50DQpgYGANCg0KYGBge3J9DQppbnN0YWxsLnBhY2thZ2VzKCJwbG90bHkiKQ0KYGBgDQoNCmBgYHtyfQ0KZG93bmxvYWQuZmlsZSgiaHR0cHM6Ly9naXRodWIuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9ibG9iL21hc3Rlci9wbG90bHlfNDA3MF9uZWRhLlJkYT9yYXc9dHJ1ZSIsZGVzdGZpbGUgPSAicGxvdGx5XzQwNzBfbmVkYS5SZGEiKQ0KbG9hZCgiQzpcXFVzZXJzXFx1c2VyXFxEb3dubG9hZHNcXHBsb3RseV80MDcwX25lZGEuUmRhIikNCmxpYnJhcnkocGxvdGx5KQ0KcGxvdGx5XzQwNzBfbmVkYSANCmdldHdkKCkNCmBgYA0KDQpgYGB7cn0NCnBsb3RseV80MDcwX25lZGEkeCRsYXlvdXQkc2hhcGVzW1sxXV0kb3BhY2l0eQ0KYGBgDQoNCmBgYHtyfQ0KcGxvdGx5XzQwNzBfbmVkYSR4JGxheW91dCRzaGFwZXNbWzFdXSRvcGFjaXR5IDwtMC45DQpwbG90bHlfNDA3MF9uZWRhDQpgYGANCg0KYGBge3J9DQpsaWJyYXJ5KHJlYWRyKQ0KdHJhbnNjcmlwdERhdGEgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL3RyYW5zY3JpcHQxMDBfMTAyLmNzdiIsDQogICAgICAgICAgICAgICAgICBjb2xfdHlwZXMgPSBjb2xzKA0KICAgICAgICAgICAgICAgICAgICDlrbjmnJ/miJDnuL49Im4iDQogICAgICAgICAgICAgICAgICApKQ0KDQp0b3RhbENyZWRpdHM8LWZ1bmN0aW9uKHgpew0KICB0cmFuc2NyaXB0RGF0YVt0cmFuc2NyaXB0RGF0YSTlrbjomZ89PXgsXS0+c3Vic2FtcGxlIA0KICBzdWJzYW1wbGUgJT4lDQogICAgbXV0YXRlKA0KICAgICAg5Y+K5qC8PSjlrbjmnJ/miJDnuL4+PTYwKQ0KICAgICkgJT4lDQogICAgc3VtbWFyaXNlKA0KICAgICAg5a246JmfPeWtuOiZn1sxXSwNCiAgICAgIOe4veS/rue/kuWtuOWIhuaVuD1zdW0o5a245YiG5pW4KSwNCiAgICAgIOe4veWvpuW+l+WtuOWIhuaVuD1zdW0o5a245YiG5pW4W+WPiuagvF0pDQogICAgKSAgDQp9DQpgYGANCg0KYGBge3J9DQp0cmFuc2NyaXB0RGF0YSAlPiUNCiAgZmlsdGVyKOWtuOWxhj09MTAwLHN0cl9zdWIo5a246JmfLDUsNik9PSJQMSIpIC0+IHN1YnNhbXBsZQ0Kc3Vic2FtcGxlJOWtuOiZnyAlPiUgdW5pcXVlIC0+IOespuWQiOaineS7tuWtuOiZnw0KYGBgDQoNCmBgYHtyfQ0KIyAwDQpjcmVkaXRSZXN1bHRzPC12ZWN0b3IoImxpc3QiLGxlbmd0aCjnrKblkIjmop3ku7blrbjomZ8pKQ0KDQojIDENCmkgPC0gMQ0K56ym5ZCI5qKd5Lu25a246JmfW2ldDQoNCiMgMg0KY3JlZGl0UmVzdWx0c1tbaV1dIDwtIHRvdGFsQ3JlZGl0cyjnrKblkIjmop3ku7blrbjomZ9baV0pDQoNCg0KYGBgDQoNCmBgYHtyfQ0KZm9yKGkgaW4gc2VxX2Fsb25nKOespuWQiOaineS7tuWtuOiZnykpew0KICBjcmVkaXRSZXN1bHRzW1tpXV0gPC0gdG90YWxDcmVkaXRzKOespuWQiOaineS7tuWtuOiZn1tpXSkNCn0gIyBjcmVkaXRSZXN1bHRzW1tpXV0g54K65YSy5a2Y5a655ZmoIA0KYGBgDQoNCiMgbmVzdCBkYXRhIGZyYW1lDQpgYGB7cn0NCmxpYnJhcnkocmVhZHIpDQpsaWJyYXJ5KHRpZHlyKQ0KbGlicmFyeURhdGEgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL2xpYnJhcnlEYXRhMi5jc3YiKQ0KYGBgDQoNCg0KYGBge3J9DQpsaWJyYXJ5RGF0YSAlPiUNCiAgZ3JvdXBfYnko5a246ZmiKSAlPiUNCiAgbmVzdCgua2V5PSLlkITpmaLlgJ/plrHos4fmlpkiKSAtPg0KICBsaWJyYXJ5RGF0YU5lc3RlZA0KYGBgDQoNCmBgYHtyfQ0KbGlicmFyeShkcGx5cikNCmxpYnJhcnlEYXRhICU+JQ0KICBncm91cF9ieSjlrbjlubQs5a246JmfKSAlPiUNCiAgc3VtbWFyaXNlKA0KICAgIOWtuOW5tOe4veWAn+mWseWGiuaVuCA9IG4oKQ0KICApIC0+IGxpYnJhcnlEYXRhMg0KYGBgDQoNCmBgYHtyfQ0KbGlicmFyeShkcGx5cikNCmRmIDwtIGRhdGEuZnJhbWUoDQogIHggPSAxOjMsDQogIHkgPSBjKCJhIiwgImQsZSxmIiwgImcsaCIpLA0KICBzdHJpbmdzQXNGYWN0b3JzID0gRg0KKQ0KZGYgJT4lDQogIG11dGF0ZSh5ID0gc3RyX3NwbGl0KHksICIsIikpIC0+IGRmU3BsaXQNCmBgYA0KDQoNCg==</div>
 
 
 
